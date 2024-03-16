@@ -1,0 +1,17 @@
+{
+  "name": "discount",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@apollo/server": "4.10.1",
+    "@apollo/subgraph": "2.7.1",
+    "graphql": "16.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}

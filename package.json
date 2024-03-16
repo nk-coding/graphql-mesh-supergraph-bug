@@ -1,0 +1,24 @@
+{
+  "name": "federation-handler-example",
+  "version": "0.5.145",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "gateway",
+    "services/*"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm:start-services npm:start-gateway-delayed\"",
+    "start-gateway": "mesh dev --dir gateway",
+    "start-gateway-delayed": "delay 1 && npm run start-gateway",
+    "start-service-products": "node services/products/index.js",
+    "start-service-discount": "node services/discount/index.js",
+    "start-services": "concurrently \"npm:start-service-*\""
+  },
+  "devDependencies": {
+    "@apollo/server": "4.10.1",
+    "apollo-server-caching": "3.3.0",
+    "concurrently": "8.2.2",
+    "delay-cli": "2.0.0"
+  }
+}

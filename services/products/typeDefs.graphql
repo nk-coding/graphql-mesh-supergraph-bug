@@ -1,0 +1,18 @@
+schema @link(import : ["@key"], url : "https://specs.apollo.dev/federation/v2.5") {
+  query: Query
+}
+
+type Query {
+  products(first: Int = 5): [Product]
+}
+
+type Product @key(fields: "id") {
+  id: ID!
+  name: String!
+  categories: [Category!]!
+}
+
+type Category @key(fields: "id") {
+  id: ID!
+  name: String!
+}

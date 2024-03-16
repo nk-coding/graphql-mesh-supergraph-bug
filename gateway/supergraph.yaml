@@ -1,0 +1,9 @@
+subgraphs:
+  products:
+    routing_url: http://localhost:9080/graphql
+    schema:
+      file: ../services/products/typeDefs.graphql
+  discount:
+    routing_url: http://localhost:9081/graphql
+    schema:
+      file: ../services/discount/typeDefs.graphql
